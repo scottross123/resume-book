@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html lang=en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">i
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link rel="stylesheet" href="static/style.css">
     <title>ACM Resume Book</title>
   </head>
   <body>
     <header>
-      hey
+
     </header>
     <main>
-      <h1>ACM</h1>
+      <h1>ACM Resume Book</h1>
       <form method="post">
-        <label for="f_name">
-          First Name
-          <input id="f_name" name="f_name" type="text" required>
-        </label>
+        <div class="form-group">
+          <label for="f_name">First Name</label>
+          <input id="f_name" class="form-input" name="f_name" type="text" required>
+        </div>
 
-        <label for="l_name">
-          Last Name
-          <input id="l_name" name="l_name" type="text" required>
-        </label>
+        <div class="form-group">
+          <label for="l_name">Last Name</label>
+          <input id="l_name" class="form-input" name="l_name" type="text" required>
+        </div>
 
-          <label for="email">
-            Primary Email Address
-            <input id="email" name="email" type="email" required>
-          </label>
+        <div class="form-group">
+          <label for="email">Primary Email Address</label>
+          <input id="email" class="form-input" name="email" type="email" required>
+        </div>
 
-        <label for="resume">
-          Resume (PDF or Word Document)
-          <input id="resume" name="resume" type="file" required>
-        </label>
+        <div class="form-group">
+          <label for="resume">Resume (PDF or Word Document)</label>
+          <input id="resume" class="form-input" name="resume" type="file" required>
+        </div>
 
-        <label for="full-time">
-          Full-Time Position
+        <div class="form-group">
+          <p>Are you looking for a...</p>
+          <label for="full-time">Full-Time Position</label>
           <input id="full-time" name="job" type="radio" required>
-        </label>
-
-        <label for="internship">
-          Internship
+          <label for="internship">Internship</label>
           <input id="internship" name="job" type="radio" required>
-        </label>
+        </div>
 
-        <input type="Submit" value="Submit your resume!">
+        <div class="form-group">
+          <input type="Submit" value="Submit your resume!">
+        </div>
       </form>
     </main>
   </body>

@@ -16,3 +16,21 @@ body {
 h1, p {
     margin: 0;
 }
+
+main {
+    margin: 4rem auto;
+    width: 40%
+}
+
+.form-input {
+    width: 100%;
+}
+
+.form-group {
+    margin: 0 auto .75rem auto;
+    padding: 0.25rem;
+}
+
+input[type="radio"] {
+    display: inline-block;
+}
