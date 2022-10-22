@@ -12,7 +12,7 @@ def create_app(test_config=None):
     else:
         app.config.from_mapping(test_config)
 
-    from . import views
-    app.register_blueprint(views.bp)
+    from . import form
+    app.register_blueprint(form.bp)
 
     return app
