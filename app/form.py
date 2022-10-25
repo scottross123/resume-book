@@ -38,7 +38,7 @@ def index():
             "f_name": request.form['f_name'],
             "l_name": request.form['l_name'],
             "email": request.form['email'],
-            "last_modified": datetime.now().isoformat(),
+            "last_modified": datetime.now().ctime(),
             "resume": request.form['resume']
         }
         if request.form['job'] == 'internship':
