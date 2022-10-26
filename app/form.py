@@ -1,12 +1,10 @@
 import io
-
 from flask import Blueprint, render_template, request, redirect, flash, current_app
 import os
 from werkzeug.utils import secure_filename
 from pydrive2.auth import GoogleAuth
 from pydrive2.drive import GoogleDrive
 from oauth2client.service_account import ServiceAccountCredentials
-from app.googleapi import DriveService, get_creds
 import gspread
 from gspread import Cell
 from datetime import datetime
@@ -77,9 +75,6 @@ def index():
             "resume": request.files['resume'].filename
         }
         resume = request.files['resume']
-        if resume and allowed_file(resume.filename):
-            filename = secure_filename(resume.filename)
-            resume.save(os.path.join(current_app.config['UPLOAD_FOLDER'], filename))
         if request.form['job'] == 'internship':
             add_entry(entry, internships)
             create_file(resume, INTERNSHIP_FOLDER_ID, 'application/pdf')
