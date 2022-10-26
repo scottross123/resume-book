@@ -1,6 +1,5 @@
 import io
-from flask import Blueprint, render_template, request, redirect, flash, current_app
-import os
+from flask import Blueprint, render_template, request, redirect
 from werkzeug.utils import secure_filename
 from pydrive2.auth import GoogleAuth
 from pydrive2.drive import GoogleDrive
@@ -52,7 +51,7 @@ def add_entry(entry: dict, worksheet):
 def create_file(file, parent_id: str, mime_type: str):
     try:
         new_file = drive.CreateFile({
-            'title': file.filename,
+            'title': secure_filename(file.filename),
             'mimeType': mime_type,
             'parents': [{'id': parent_id}]
         })
